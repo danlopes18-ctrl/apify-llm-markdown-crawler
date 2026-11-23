@@ -1,0 +1,17 @@
+{
+  "actorSpecification": 1,
+  "name": "llm-markdown-sitemap-extractor",
+  "title": "Fast LLM-Ready Markdown & Sitemap Crawler (RAG / MCP)",
+  "description": "Ultra-fast, zero-browser HTML-to-Markdown crawler for RAG pipelines, Claude, Cursor, n8n & MCP agents. Supports direct URLs or automatic sitemap.xml discovery, removes boilerplate/nav/scripts, preserves code blocks & headings, and estimates token counts.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "meta": {
+    "templateId": "js-start"
+  },
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Extracted Pages Overview",
+      "transformation": {
+        "fields": [
+          "url",
+          "statusCode",
+          "title",
+          "wordCount",
+          "estimatedTokens",
+          "headingsCount",
+          "fetchMs"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "url": { "label": "URL", "format": "link" },
+          "statusCode": { "label": "HTTP", "format": "number" },
+          "title": { "label": "Title", "format": "text" },
+          "wordCount": { "label": "Words", "format": "number" },
+          "estimatedTokens": { "label": "Est. Tokens", "format": "number" },
+          "headingsCount": { "label": "Headings", "format": "number" },
+          "fetchMs": { "label": "Speed (ms)", "format": "number" }
+        }
+      }
+    }
+  }
+}

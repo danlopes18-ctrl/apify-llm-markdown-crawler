@@ -1,0 +1,14 @@
+{
+  "name": "llm-markdown-sitemap-extractor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Fast, zero-browser HTML-to-Markdown & Sitemap Crawler for RAG pipelines, Claude, Cursor, n8n & MCP agents.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node test/verify_actor.mjs"
+  },
+  "dependencies": {
+    "apify": "^3.2.6"
+  }
+}

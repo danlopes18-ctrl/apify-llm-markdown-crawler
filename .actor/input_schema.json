@@ -1,0 +1,66 @@
+{
+  "title": "Fast LLM-Ready Markdown & Sitemap Crawler Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Target URLs or Sitemap URLs",
+      "type": "array",
+      "description": "Direct page URLs (e.g. https://danlopes18-ctrl.github.io/) or sitemap URLs (e.g. https://danlopes18-ctrl.github.io/sitemap.xml).",
+      "editor": "stringList",
+      "prefill": [
+        "https://danlopes18-ctrl.github.io/",
+        "https://danlopes18-ctrl.github.io/sitemap.xml"
+      ],
+      "example": [
+        "https://docs.apify.com/sitemap.xml",
+        "https://stripe.com/docs"
+      ]
+    },
+    "discoverSitemap": {
+      "title": "Auto-Discover /sitemap.xml",
+      "type": "boolean",
+      "description": "When enabled, if a domain root URL is provided, also probe /sitemap.xml to crawl subpages up to maxPages.",
+      "default": false
+    },
+    "maxPages": {
+      "title": "Max Pages to Extract",
+      "type": "integer",
+      "description": "Maximum number of pages to extract per run (1-500).",
+      "default": 25,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "includePattern": {
+      "title": "URL Include Regex (optional)",
+      "type": "string",
+      "description": "Only extract URLs matching this regular expression (e.g. /docs/|/blog/).",
+      "editor": "textfield",
+      "default": ""
+    },
+    "excludePattern": {
+      "title": "URL Exclude Regex (optional)",
+      "type": "string",
+      "description": "Skip URLs matching this regular expression (e.g. /login|/pricing).",
+      "editor": "textfield",
+      "default": ""
+    },
+    "maxCharsPerPage": {
+      "title": "Max Markdown Characters Per Page",
+      "type": "integer",
+      "description": "Trim page markdown above this character limit to keep LLM context windows lean (1000-200000).",
+      "default": 50000,
+      "minimum": 1000,
+      "maximum": 200000
+    },
+    "maxConcurrency": {
+      "title": "Max Concurrency",
+      "type": "integer",
+      "description": "Parallel HTTP fetches (1-20).",
+      "default": 6,
+      "minimum": 1,
+      "maximum": 20
+    }
+  },
+  "required": ["startUrls"]
+}

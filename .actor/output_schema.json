@@ -1,0 +1,16 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "LLM-Ready Markdown Crawler Output",
+  "properties": {
+    "overview": {
+      "type": "string",
+      "title": "Extracted Markdown Pages (Overview)",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "items": {
+      "type": "string",
+      "title": "Full JSON + Markdown Dataset",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}
